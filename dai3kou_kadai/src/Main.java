@@ -14,15 +14,15 @@ public class Main {
 		userList.add("田中");
 		userList.add("鈴木");
 		userList.add("佐藤");
-		for (int i = 0; i < userList.size(); i++) {
-			System.out.println(userList.get(i) + "は" + userMap.get(userList.get(i)));
+		for (String s : userList) {
+			System.out.println(s + "は" + userMap.get(s));
 		}
 		userList.add("池田");
 
 		try {
 			System.out.println("userList更新後に再処理");
-			for (int i = 0; i < userList.size(); i++) {
-				System.out.println(userList.get(i) + "は" + userMap.get(userList.get(i)));
+			for (String s : userList) {
+				System.out.println(s + "は" + userMap.get(s));
 			}
 			throw new ArrayIndexOutOfBoundsException();
 		} catch (ArrayIndexOutOfBoundsException e) {
